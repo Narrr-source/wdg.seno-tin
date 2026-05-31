@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Wedding of Seno & Tin</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Great+Vibes&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        /* --- STYLE DASAR --- */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            text-align: center;
+            overflow-x: hidden;
+        }
+        h1, h2, h3, .serif {
+            font-family: 'Cinzel', serif;
+        }
+        .cursive {
+            font-family: 'Great Vibes', cursive;
+            font-size: 3.5rem;
+            color: #b89742; /* Warna Emas */
+            margin: 10px 0;
+        }
+        p {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            color: #555;
+        }
+        .container {
+            max-width: 500px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            min-height: 100vh;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        section {
+            padding: 60px 20px;
+            border-bottom: 1px solid #eee;
+        }
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: #b89742;
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: 600;
+            margin-top: 20px;
+            transition: 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background-color: #967933;
+        }
+
+        /* --- HALAMAN SAMPUL (COVER) --- */
+        #cover {
+            background: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), url('https://drive.google.com/file/d/1RZQOHwvGj7vs8wy6mk_aHftfqWjTxxuD/view?usp=drive_link') no-repeat center center;
+            background-size: cover;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        #cover h3 {
+            font-size: 1rem;
+            letter-spacing: 3px;
+            color: #777;
+        }
+        .tamu-box {
+            background: rgba(184, 151, 66, 0.1);
+            padding: 15px 30px;
+            border-radius: 10px;
+            margin: 30px 0;
+            border: 1px solid rgba(184, 151, 66, 0.3);
+        }
+
+        /* --- BAGIAN MEMPELAI --- */
+        .mempelai-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #b89742;
+            margin: 15px 0;
+        }
+        .mempelai-box {
+            margin-bottom: 40px;
+        }
+        .mempelai-box h2 {
+            font-size: 1.8rem;
+            color: #222;
+        }
+        .sosmed-link {
+            font-size: 0.85rem;
+            color: #b89742;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 5px;
+        }
+
+        /* --- BAGIAN ACARA --- */
+        .acara-box {
+            background: #fafafa;
+            border: 1px solid #ebeeef;
+            padding: 30px 20px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.02);
+        }
+        .acara-box h3 {
+            color: #b89742;
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+        }
+        .tanggal-grid {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin: 15px 0;
+            font-weight: bold;
+        }
+        .tanggal-item {
+            padding: 10px 15px;
+            background: #eee;
+            border-radius: 5px;
+            min-width: 60px;
+        }
+        .tanggal-item.highlight {
+            background: #b89742;
+            color: white;
+        }
+
+        /* --- KATA MUTIARA / AYAT --- */
+        .quote {
+            font-style: italic;
+            color: #666;
+            font-size: 0.9rem;
+            background: #fdfbf7;
+            padding: 30px 20px;
+            border-left: 4px solid #b89742;
+            margin: 20px 0;
+        }
+
+        /* --- FORM KEHADIRAN --- */
+        .form-group {
+            text-align: left;
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 5px;
+            color: #444;
+        }
+        .form-control {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-family: inherit;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <section id="cover">
+            <h3>THE WEDDING OF</h3>
+            <div class="cursive">SENO & TIN</div>
+            
+            <div class="tamu-box">
+                <p style="font-size: 0.85rem; letter-spacing: 1px;">KEPADA YTH.</p>
+                <h2 style="margin: 5px 0; font-size: 1.5rem;">Tamu Undangan</h2>
+                <p style="font-size: 0.8rem; color: #777;">Di Tempat</p>
+            </div>
+            
+            <p style="font-size: 0.85rem; padding: 0 20px;">Tanpa Mengurangi Rasa Hormat, Kami Mengundang Bapak/Ibu/Saudara/i untuk Hadir di Acara Kami.</p>
+            <a href="#mempelai" class="btn">Buka Undangan</a>
+        </section>
+
+
+        <section id="mempelai">
+            <h3>OUR WEDDING</h3>
+            <p style="margin: 20px 0; font-size: 0.9rem;">
+                Atas Rahmat Tuhan Yang Maha Esa, kami bermaksud mengundang Anda di acara Kami. Merupakan suatu kehormatan dan kebahagiaan bagi kami sekeluarga, apabila Bapak/Ibu/Saudara/i berkenan hadir dan memberikan doa restu.
+            </p>
+
+            <div class="mempelai-box">
+                <img class="mempelai-img" src="https://drive.google.com/file/d/1Rf5ecq7rpBi8w4lCQhJiYPFl6W-VtZrC/view?usp=drive_link" alt="Foto Pria">
+                <h2>Tobias Seno</h2>
+                <p style="margin-top: 5px;">Putra dari Pasangan <br><b>Bapak Seno & Ibu Seno</b></p>
+                <p style="font-size: 0.85rem; color: #777;">Beralamat di Flores</p>
+                <a href="https://instagram.com/Jessnolimit" target="_blank" class="sosmed-link">@Jessnolimit</a>
+            </div>
+
+            <div class="cursive" style="font-size: 2.5rem; margin: 20px 0;">&</div>
+
+            <div class="mempelai-box">
+                <img class="mempelai-img" src="https://drive.google.com/file/d/1Rak6NvLqirB3Ew_vjK3Bx0bFGZ9GO84B/view?usp=drive_link"Foto Wanita">
+                <h2>Sisca Kohl</h2>
+                <p style="margin-top: 5px;">Putri dari Pasangan <br><b>Ayah ABCDE & Ibu ANBVF</b></p>
+                <p style="font-size: 0.85rem; color: #777;">Beralamat di Jakarta</p>
+                <a href="https://instagram.com/Siscachol" target="_blank" class="sosmed-link">@Siscachol</a>
+            </div>
+        </section>
+
+
+        <section id="quote">
+            <div class="quote">
+                "Demikianlah mereka bukan lagi dua melainkan satu."
+                <br><br><b>- Ar-Rum: 21 -</b>
+            </div>
+        </section>
+
+
+        <section id="acara">
+            <h2 style="margin-bottom: 30px; letter-spacing: 2px;">SAVE THE DATE</h2>
+
+            <div class="acara-box">
+                <h3>Akad Pernikahan</h3>
+                <div class="tanggal-grid">
+                    <div class="tanggal-item">Rabu</div>
+                    <div class="tanggal-item highlight">18</div>
+                    <div class="tanggal-item">Feb 2026</div>
+                </div>
+                <p><b>Pukul:</b> 08:00 WITA - Selesai</p>
+                <p style="margin-top: 10px; color: #666;">Jalan Gunung Batur, No 78, Denpasar, Bali</p>
+                <a href="https://maps.app.goo.gl/y8YAuVRdLx9RTXQo7" target="_blank" class="btn" style="padding: 8px 20px; font-size: 0.85rem;">Google Maps</a>
+            </div>
+
+            <div class="acara-box">
+                <h3>Resepsi Pernikahan</h3>
+                <div class="tanggal-grid">
+                    <div class="tanggal-item">Kamis</div>
+                    <div class="tanggal-item highlight">15</div>
+                    <div class="tanggal-item">Mei 2025</div>
+                </div>
+                <p><b>Pukul:</b> 19:00 WITA - Sampai Selesai</p>
+                <p style="margin-top: 10px; color: #666;">Gedung Serbaguna, Rumah Justin, Jakarta</p>
+                <a href="https://goo.gl/maps/1h11E7vMr2w8EXXF9" target="_blank" class="btn" style="padding: 8px 20px; font-size: 0.85rem;">Google Maps</a>
+            </div>
+        </section>
+
+
+        <section id="rsvp">
+            <h3 style="margin-bottom: 10px;">KONFIRMASI KEHADIRAN</h3>
+            <p style="margin-bottom: 25px; font-size: 0.85rem;">Mohon konfirmasikan kehadiran Anda melalui form di bawah ini:</p>
+            
+            <form action="#" method="POST" onsubmit="alert('Terima kasih! Konfirmasi Anda telah terkirim.'); return false;">
+                <div class="form-group">
+                    <label for="nama">Nama Lengkap</label>
+                    <input type="text" id="nama" class="form-control" placeholder="Contoh: Bapak Budi" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="status">Konfirmasi Kehadiran</label>
+                    <select id="status" class="form-control" required>
+                        <option value="">-- Pilih Kehadiran --</option>
+                        <option value="hadir">SAYA AKAN HADIR</option>
+                        <option value="tidak_hadir">MAAF, SAYA TIDAK BISA HADIR</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="jumlah">Jumlah Orang</label>
+                    <select id="jumlah" class="form-control">
+                        <option value="1">1 Orang</option>
+                        <option value="2">2 Orang</option>
+                        <option value="3">3 Orang</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="btn" style="width: 100%;">Kirim Konfirmasi</button>
+            </form>
+        </section>
+
+        <footer style="padding: 30px 20px; background-color: #333; color: #fff; font-size: 0.8rem;">
+            <p style="color: #aaa;">Terima Kasih atas Doa Restu Anda</p>
+            <div class="serif" style="margin-top: 10px; color: #b89742; font-weight: bold;">JUSTIN & SISCA</div>
+        </footer>
+
+    </div>
+
+</body>
+</html>
